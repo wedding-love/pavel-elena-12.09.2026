@@ -88,11 +88,11 @@
       background: #B5AD80;
     }
 
-    /* ============ АНИМАЦИЯ ============ */
+    /* ============ АНИМАЦИЯ (ПЛАВНАЯ И МЕДЛЕННАЯ) ============ */
     .fade-up-item {
       opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 0.9s cubic-bezier(0.2, 0.9, 0.4, 1), transform 0.9s cubic-bezier(0.2, 0.9, 0.4, 1);
+      transform: translateY(50px);
+      transition: opacity 1.4s cubic-bezier(0.2, 0.9, 0.4, 1), transform 1.4s cubic-bezier(0.2, 0.9, 0.4, 1);
       will-change: transform, opacity;
     }
 
@@ -103,8 +103,8 @@
 
     .hero-fade {
       opacity: 0;
-      transform: translateY(50px) scale(0.95);
-      transition: opacity 1.2s cubic-bezier(0.2, 0.9, 0.4, 1), transform 1.2s cubic-bezier(0.2, 0.9, 0.4, 1);
+      transform: translateY(60px) scale(0.95);
+      transition: opacity 1.6s cubic-bezier(0.2, 0.9, 0.4, 1), transform 1.6s cubic-bezier(0.2, 0.9, 0.4, 1);
       will-change: transform, opacity;
     }
 
@@ -113,11 +113,11 @@
       transform: translateY(0) scale(1);
     }
 
-    .delay-1 { transition-delay: 0.1s; }
-    .delay-2 { transition-delay: 0.2s; }
-    .delay-3 { transition-delay: 0.3s; }
-    .delay-4 { transition-delay: 0.4s; }
-    .delay-5 { transition-delay: 0.5s; }
+    .delay-1 { transition-delay: 0.15s; }
+    .delay-2 { transition-delay: 0.3s; }
+    .delay-3 { transition-delay: 0.45s; }
+    .delay-4 { transition-delay: 0.6s; }
+    .delay-5 { transition-delay: 0.75s; }
 
     .screen {
       width: 100%;
@@ -543,7 +543,7 @@
       font-family: "Playfair Display", serif;
       font-weight: 600;
       font-style: italic;
-      font-size: clamp(2rem, 6.5vw, 2.6rem);
+      font-size: clamp(2.2rem, 7vw, 2.8rem);
       color: #64652A;
       letter-spacing: 4px;
       text-transform: uppercase;
@@ -585,7 +585,7 @@
     .timing-time {
       font-family: "Playfair Display", serif;
       font-weight: 600;
-      font-size: clamp(1.3rem, 4vw, 1.7rem);
+      font-size: clamp(1.5rem, 4.5vw, 1.9rem);
       color: #64652A;
       white-space: nowrap;
       min-width: 70px;
@@ -594,14 +594,14 @@
     .timing-desc {
       font-family: "Bad Script", cursive;
       font-weight: 400;
-      font-size: clamp(1.05rem, 3.5vw, 1.3rem);
+      font-size: clamp(1.2rem, 4vw, 1.6rem);
       color: #f8f2ed;
       line-height: 1.3;
     }
 
     .timing-desc span {
       display: block;
-      font-size: clamp(0.8rem, 2.2vw, 0.95rem);
+      font-size: clamp(0.9rem, 2.5vw, 1.1rem);
       color: #64652A;
       font-style: italic;
       font-family: "Cormorant Garamond", serif;
@@ -718,7 +718,7 @@
       font-family: "Bad Script", cursive;
       font-weight: 400;
       font-size: clamp(1.05rem, 4vw, 1.4rem);
-      color: #64652A;
+      color: #f8f2ed;
       text-align: center;
       letter-spacing: 1px;
       margin-bottom: 14px;
@@ -765,8 +765,8 @@
     }
 
     .ref-image {
-      width: 200px;
-      height: 270px;
+      width: 240px;
+      height: 320px;
       object-fit: cover;
       flex-shrink: 0;
       display: block;
@@ -828,7 +828,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 30px;
+      gap: 50px;
     }
 
     .final-title {
@@ -1013,8 +1013,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 8px;
-      padding-top: 30px;
+      gap: 12px;
+      padding-top: 50px;
       border-top: 1px solid rgba(100, 101, 42, 0.25);
       margin-top: 10px;
     }
@@ -1023,7 +1023,7 @@
       font-family: "Playfair Display", serif;
       font-weight: 600;
       font-style: italic;
-      font-size: clamp(1.8rem, 5.5vw, 2.2rem);
+      font-size: clamp(2rem, 6vw, 2.4rem);
       color: #64652A;
       letter-spacing: 3px;
       text-transform: uppercase;
@@ -1033,7 +1033,7 @@
     .final-contacts-text {
       font-family: "Bad Script", cursive;
       font-weight: 400;
-      font-size: clamp(1rem, 3.8vw, 1.3rem);
+      font-size: clamp(1.1rem, 4.2vw, 1.5rem);
       color: #f8f2ed;
       text-align: center;
       line-height: 1.6;
@@ -1048,21 +1048,20 @@
       gap: 2px;
       font-family: "Bad Script", cursive;
       font-weight: 400;
-      padding: 6px 16px;
+      padding: 10px 16px;
       width: 100%;
-      max-width: 320px;
+      max-width: 360px;
       text-align: center;
     }
 
     .contacts-label {
-      font-size: clamp(0.85rem, 3vw, 1rem);
+      font-size: clamp(1rem, 3.5vw, 1.2rem);
       color: #64652A;
-      opacity: 0.85;
       letter-spacing: 1px;
     }
 
     .contacts-number {
-      font-size: clamp(1.1rem, 4vw, 1.4rem);
+      font-size: clamp(1.3rem, 4.5vw, 1.7rem);
       color: #f8f2ed;
     }
 
@@ -1075,6 +1074,12 @@
     .contacts-number a:hover {
       color: #64652A;
       text-decoration: underline;
+    }
+
+    .contacts-tg {
+      font-size: clamp(0.9rem, 3vw, 1.1rem);
+      color: #64652A;
+      opacity: 0.9;
     }
 
     /* ============ ДАТА МАРКИ ============ */
@@ -1118,7 +1123,7 @@
 
     .final-wishes {
       text-align: center;
-      margin-top: 30px;
+      margin-top: 50px;
       width: 100%;
       padding-top: 10px;
     }
@@ -1163,12 +1168,12 @@
       .timing-item { padding: 12px 14px; gap: 10px; }
       .white-rectangle { padding: 22px 14px 0; }
       .tape-sticker { width: 55px; top: -28px; }
-      .ref-image { width: 150px; height: 200px; }
+      .ref-image { width: 160px; height: 215px; }
       .dresscode-container { gap: 18px; }
       .gift-image { width: min(90%, 280px); }
       .drinks-grid { grid-template-columns: 1fr; gap: 10px; }
       .submit-btn { min-width: 180px; padding: 14px 30px; font-size: 1rem; margin-bottom: 10px; }
-      .final-container { gap: 22px; }
+      .final-container { gap: 35px; }
       .big-date { font-size: clamp(2.8rem, 11vw, 3.8rem); }
       .location-content { gap: 16px; }
       .invitation-greeting { font-size: clamp(1.2rem, 4.5vw, 1.6rem); }
@@ -1187,12 +1192,15 @@
       .hero-image-section { padding: 0 12px 0; }
       .kids-image { max-height: none; }
       .final-subtitle { font-size: clamp(0.95rem, 3.8vw, 1.15rem); }
-      .contacts-item { padding: 6px 12px; }
-      .contacts-number { font-size: clamp(1rem, 3.8vw, 1.2rem); }
-      .contacts-label { font-size: clamp(0.75rem, 2.8vw, 0.9rem); }
-      .final-contacts { gap: 6px; padding-top: 20px; }
-      .final-contacts-title { font-size: clamp(1.5rem, 4.5vw, 1.8rem); }
-      .final-wishes { margin-top: 20px; }
+      .contacts-item { padding: 8px 12px; max-width: 280px; }
+      .contacts-number { font-size: clamp(1.1rem, 4.2vw, 1.3rem); }
+      .contacts-label { font-size: clamp(0.9rem, 3.2vw, 1rem); }
+      .contacts-tg { font-size: clamp(0.8rem, 2.8vw, 0.95rem); }
+      .final-contacts { gap: 8px; padding-top: 30px; }
+      .final-contacts-title { font-size: clamp(1.6rem, 5vw, 1.9rem); }
+      .final-contacts-text { font-size: clamp(1rem, 3.8vw, 1.2rem); }
+      .final-wishes { margin-top: 30px; }
+      .final-container { gap: 35px; }
     }
 
     @media (min-width: 481px) and (max-width: 767px) {
@@ -1206,18 +1214,19 @@
       .screen-sixth { padding: 45px 22px 55px 22px; }
       .screen-final { padding: 45px 22px 55px 22px; }
       .location-photo-wrapper { max-width: 360px; }
-      .ref-image { width: 170px; height: 230px; }
+      .ref-image { width: 180px; height: 240px; }
       .calendar-image-wrapper { max-width: 380px; }
       .dresscode-container { padding: 0; }
       .color-square { width: 48px; height: 48px; }
       .references-wrapper { margin-left: -22px; margin-right: -22px; width: calc(100% + 44px); }
       .gift-image { width: min(90%, 340px); }
       .submit-btn { margin-bottom: 12px; }
-      .final-container { gap: 26px; }
+      .final-container { gap: 40px; }
       .full-width-heart { max-width: 400px; }
       .kids-marquee-track span { font-size: clamp(0.8rem, 2.2vw, 0.95rem); }
-      .final-contacts { padding-top: 25px; }
-      .final-wishes { margin-top: 25px; }
+      .final-contacts { padding-top: 35px; }
+      .final-wishes { margin-top: 35px; }
+      .contacts-item { max-width: 320px; }
     }
 
     @media (min-width: 768px) and (max-width: 1024px) {
@@ -1240,7 +1249,7 @@
         background: #2E1A0E; 
         padding: 20px 0; 
       }
-      .ref-image { width: 220px; height: 290px; }
+      .ref-image { width: 260px; height: 345px; }
       .gift-image { width: min(90%, 420px); }
       .screen-second { padding: 30px 32px 35px; }
       .invitation-content { gap: 14px; padding-top: 20px; }
@@ -1257,9 +1266,9 @@
       .references-wrapper { margin-left: -32px; margin-right: -32px; width: calc(100% + 64px); }
       .full-width-heart { max-width: 520px; }
       .screen-first { margin-bottom: -5px; }
-      .final-container { gap: 30px; }
-      .final-contacts { padding-top: 35px; }
-      .final-wishes { margin-top: 35px; }
+      .final-container { gap: 50px; }
+      .final-contacts { padding-top: 50px; }
+      .final-wishes { margin-top: 50px; }
     }
   </style>
 </head>
@@ -1393,10 +1402,10 @@
           <div class="ref-subtitle fade-up-item delay-1">Примеры нарядов</div>
           <div class="scroll-container">
             <div class="images-row">
-              <img src="1.jpg" class="ref-image" onerror="this.src='https://placehold.co/220x290/6C0B25/64652A?text=👗';">
-              <img src="2.jpg" class="ref-image" onerror="this.src='https://placehold.co/220x290/2E1A0E/64652A?text=👔';">
-              <img src="3.jpg" class="ref-image" onerror="this.src='https://placehold.co/220x290/64652A/f8f2ed?text=👗';">
-              <img src="4.jpg" class="ref-image" onerror="this.src='https://placehold.co/220x290/461312/64652A?text=👔';">
+              <img src="1.jpg" class="ref-image" onerror="this.src='https://placehold.co/260x345/6C0B25/64652A?text=👗';">
+              <img src="2.jpg" class="ref-image" onerror="this.src='https://placehold.co/260x345/2E1A0E/64652A?text=👔';">
+              <img src="3.jpg" class="ref-image" onerror="this.src='https://placehold.co/260x345/64652A/f8f2ed?text=👗';">
+              <img src="4.jpg" class="ref-image" onerror="this.src='https://placehold.co/260x345/461312/64652A?text=👔';">
             </div>
           </div>
         </div>
@@ -1412,7 +1421,7 @@
         Мы будем рады вашему присутствию — это главный подарок для нас!<br><br>
         Традиционно можно поздравить нас в конвертах с купюрами. А также мы хотим внести небольшую фишку: приятным дополнением к подарку станет виниловая пластинка от каждой пары. Мы поделимся с вами нашей коллекцией, чтобы вы могли выбрать что-то новое и не повторяться.
       </div>
-      <div class="fade-up-item delay-3"><img src="подарок.png" alt="Подарок" class="gift-image" onerror="this.src='https://placehold.co/400x300/461312/64652A?text=🎵+Vinyl';"></div>
+      <div class="fade-up-item delay-3"><img src="конверт.png" alt="Конверт" class="gift-image" onerror="this.src='https://placehold.co/400x300/461312/64652A?text=✉️+Конверт';"></div>
     </div>
   </section>
 
@@ -1475,12 +1484,14 @@
         
         <div class="contacts-item fade-up-item delay-5">
           <span class="contacts-label">Невеста — Елена</span>
-          <span class="contacts-number"><a href="tel:+79199503585">+7 919 950 35 85</a> <span style="font-size:0.8rem; color:#64652A;">(TG: lenochkaalferova)</span></span>
+          <span class="contacts-number"><a href="tel:+79199503585">+7 919 950 35 85</a></span>
+          <span class="contacts-tg">Telegram: lenochkaalferova</span>
         </div>
         
         <div class="contacts-item fade-up-item delay-1" style="transition-delay: 0.6s;">
           <span class="contacts-label">Жених — Павел</span>
-          <span class="contacts-number"><a href="tel:+79161871560">+7 916 187 15 60</a> <span style="font-size:0.8rem; color:#64652A;">(TG: Paolokoteliano)</span></span>
+          <span class="contacts-number"><a href="tel:+79161871560">+7 916 187 15 60</a></span>
+          <span class="contacts-tg">Telegram: Paolokoteliano</span>
         </div>
 
         <div class="final-wishes fade-up-item delay-2" style="transition-delay: 0.7s;">
