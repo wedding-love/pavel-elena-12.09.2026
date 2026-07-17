@@ -701,7 +701,7 @@
       display: none;
     }
 
-    /* ===== ДРЕСС-КОД: КАРТОЧКИ (ВАРИАНТ 3) ===== */
+    /* ===== ДРЕСС-КОД: КАРТОЧКИ (БЕЗ ИКОНОК, ЕДИНЫЙ ШРИФТ) ===== */
     .dresscode-cards {
       display: flex;
       flex-direction: column;
@@ -723,18 +723,12 @@
       border-color: #64652A;
     }
 
-    .card-badge {
-      font-size: 1.8rem;
-      margin-bottom: 2px;
-    }
-
     .card-title {
-      font-family: "Playfair Display", serif;
-      font-weight: 600;
-      font-style: italic;
+      font-family: "Bad Script", cursive;
+      font-weight: 400;
       font-size: clamp(1.1rem, 3.5vw, 1.3rem);
       color: #2E1A0E;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
       margin-bottom: 4px;
     }
 
@@ -1256,7 +1250,6 @@
       .final-wishes { margin-top: 30px; }
       .final-container { gap: 35px; }
       .dresscode-card { padding: 14px 12px; }
-      .card-badge { font-size: 1.5rem; }
     }
 
     @media (min-width: 481px) and (max-width: 767px) {
@@ -1424,7 +1417,7 @@
     </div>
   </section>
 
-  <!-- ЭКРАН 5: ДРЕСС-КОД (КАРТОЧКИ) -->
+  <!-- ЭКРАН 5: ДРЕСС-КОД (КАРТОЧКИ БЕЗ ИКОНОК) -->
   <section class="screen screen-fifth">
     <div class="dresscode-container">
       <div class="dresscode-title fade-up-item delay-1">Дресс-код</div>
@@ -1450,15 +1443,13 @@
           </div>
         </div>
 
-        <!-- ДРЕСС-КОД: КАРТОЧКИ -->
+        <!-- КАРТОЧКИ БЕЗ ИКОНОК, ЕДИНЫЙ ШРИФТ -->
         <div class="dresscode-cards fade-up-item delay-5">
           <div class="dresscode-card">
-            <div class="card-badge">👔</div>
             <div class="card-title">Мужчины</div>
             <div class="card-text">белая рубашка, черные брюки, галстук или бабочка в палитре нашего дресс-кода. Допустим стильный образ с поло в тех же тонах и брюками.</div>
           </div>
           <div class="dresscode-card">
-            <div class="card-badge">👗</div>
             <div class="card-title">Девушки</div>
             <div class="card-text">коктейльные платья в цветовой гамме нашего торжества.</div>
           </div>
