@@ -701,19 +701,58 @@
       display: none;
     }
 
-    /* ----- БЛОК ДРЕСС-КОДА (ЦЕНТРИРОВАННЫЙ, НЕ ЖИРНЫЙ) ----- */
-    .dresscode-details {
-      font-family: "Bad Script", cursive;
-      font-weight: 400;
-      font-size: clamp(1rem, 3.8vw, 1.3rem);
-      color: #2E1A0E;
-      text-align: center;
-      line-height: 2;
-      padding: 0 8px 20px;
+    /* ===== ДРЕСС-КОД: КАРТОЧКИ (ВАРИАНТ 3) ===== */
+    .dresscode-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding: 0 4px 20px;
     }
 
-    .dresscode-details p {
-      margin: 0;
+    .dresscode-card {
+      border: 1px solid rgba(100, 101, 42, 0.2);
+      border-radius: 12px;
+      padding: 18px 16px;
+      background: rgba(255, 255, 255, 0.4);
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .dresscode-card:hover {
+      background: rgba(255, 255, 255, 0.7);
+      border-color: #64652A;
+    }
+
+    .card-badge {
+      font-size: 1.8rem;
+      margin-bottom: 2px;
+    }
+
+    .card-title {
+      font-family: "Playfair Display", serif;
+      font-weight: 600;
+      font-style: italic;
+      font-size: clamp(1.1rem, 3.5vw, 1.3rem);
+      color: #2E1A0E;
+      letter-spacing: 2px;
+      margin-bottom: 4px;
+    }
+
+    .card-text {
+      font-family: "Bad Script", cursive;
+      font-weight: 400;
+      font-size: clamp(0.9rem, 3.2vw, 1.1rem);
+      color: #2E1A0E;
+      line-height: 1.6;
+    }
+
+    @media (min-width: 600px) {
+      .dresscode-cards {
+        flex-direction: row;
+      }
+      .dresscode-card {
+        flex: 1;
+      }
     }
 
     .references-wrapper {
@@ -1216,7 +1255,8 @@
       .final-contacts-text { font-size: clamp(1rem, 3.8vw, 1.2rem); }
       .final-wishes { margin-top: 30px; }
       .final-container { gap: 35px; }
-      .dresscode-details { font-size: clamp(0.9rem, 3.5vw, 1.1rem); line-height: 1.9; }
+      .dresscode-card { padding: 14px 12px; }
+      .card-badge { font-size: 1.5rem; }
     }
 
     @media (min-width: 481px) and (max-width: 767px) {
@@ -1285,6 +1325,7 @@
       .final-container { gap: 50px; }
       .final-contacts { padding-top: 50px; }
       .final-wishes { margin-top: 50px; }
+      .dresscode-card { padding: 22px 20px; }
     }
   </style>
 </head>
@@ -1383,7 +1424,7 @@
     </div>
   </section>
 
-  <!-- ЭКРАН 5: ДРЕСС-КОД -->
+  <!-- ЭКРАН 5: ДРЕСС-КОД (КАРТОЧКИ) -->
   <section class="screen screen-fifth">
     <div class="dresscode-container">
       <div class="dresscode-title fade-up-item delay-1">Дресс-код</div>
@@ -1409,12 +1450,18 @@
           </div>
         </div>
 
-        <!-- НОВЫЙ БЛОК ТЕКСТА — ЦЕНТРИРОВАННЫЙ, НЕ ЖИРНЫЙ, СТРОКИ РАЗДЕЛЕНЫ -->
-        <div class="dresscode-details fade-up-item delay-5">
-          <p>Мужчины</p>
-          <p>белая рубашка, черные брюки, галстук или бабочка в палитре нашего дресс-кода. Допустим стильный образ с поло в тех же тонах и брюками.</p>
-          <p>Девушки</p>
-          <p>коктейльные платья в цветовой гамме нашего торжества.</p>
+        <!-- ДРЕСС-КОД: КАРТОЧКИ -->
+        <div class="dresscode-cards fade-up-item delay-5">
+          <div class="dresscode-card">
+            <div class="card-badge">👔</div>
+            <div class="card-title">Мужчины</div>
+            <div class="card-text">белая рубашка, черные брюки, галстук или бабочка в палитре нашего дресс-кода. Допустим стильный образ с поло в тех же тонах и брюками.</div>
+          </div>
+          <div class="dresscode-card">
+            <div class="card-badge">👗</div>
+            <div class="card-title">Девушки</div>
+            <div class="card-text">коктейльные платья в цветовой гамме нашего торжества.</div>
+          </div>
         </div>
 
         <div class="references-wrapper">
