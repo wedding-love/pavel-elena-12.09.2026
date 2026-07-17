@@ -701,6 +701,25 @@
       display: none;
     }
 
+    /* ----- НОВЫЙ БЛОК ДРЕСС-КОДА (ЦЕНТРИРОВАННЫЙ, НЕ ЖИРНЫЙ) ----- */
+    .dresscode-details {
+      font-family: "Bad Script", cursive;
+      font-weight: 400;
+      font-size: clamp(1rem, 3.8vw, 1.3rem);
+      color: #2E1A0E;
+      text-align: center;
+      line-height: 2;
+      padding: 0 8px 20px;
+    }
+
+    .dresscode-details p {
+      margin: 0;
+    }
+
+    .dresscode-details .gender-label {
+      font-weight: 400;
+    }
+
     .references-wrapper {
       width: 100%;
       margin: 0;
@@ -1201,6 +1220,7 @@
       .final-contacts-text { font-size: clamp(1rem, 3.8vw, 1.2rem); }
       .final-wishes { margin-top: 30px; }
       .final-container { gap: 35px; }
+      .dresscode-details { font-size: clamp(0.9rem, 3.5vw, 1.1rem); line-height: 1.9; }
     }
 
     @media (min-width: 481px) and (max-width: 767px) {
@@ -1332,7 +1352,7 @@
     </div>
   </section>
 
-  <!-- ЭКРАН 3: Локация (обновлённая) -->
+  <!-- ЭКРАН 3: Локация -->
   <section class="screen screen-third">
     <div class="location-content">
       <div class="location-label fade-up-item delay-1">Локация</div>
@@ -1367,7 +1387,7 @@
     </div>
   </section>
 
-  <!-- ЭКРАН 5: ДРЕСС-КОД (сокращённый текст) -->
+  <!-- ЭКРАН 5: ДРЕСС-КОД (обновлённый текст) -->
   <section class="screen screen-fifth">
     <div class="dresscode-container">
       <div class="dresscode-title fade-up-item delay-1">Дресс-код</div>
@@ -1393,9 +1413,10 @@
           </div>
         </div>
 
-        <div class="fade-up-item delay-5" style="font-family: 'Bad Script', cursive; font-size: clamp(0.95rem, 3.5vw, 1.2rem); color: #2E1A0E; text-align: center; line-height: 1.8; padding: 0 4px 20px;">
-          <strong>Мужчины:</strong> белая рубашка, черные брюки, галстук или бабочка в оттенках бордо и олива. Допустим поло с брюками.<br><br>
-          <strong>Девушки:</strong> коктейльные платья в оттенках бордо и олива.
+        <!-- НОВЫЙ БЛОК ТЕКСТА — ЦЕНТРИРОВАННЫЙ, НЕ ЖИРНЫЙ -->
+        <div class="dresscode-details fade-up-item delay-5">
+          <p><span class="gender-label">Мужчинам:</span> белая рубашка, черные брюки, галстук или бабочка в палитре нашего дресс-кода. Допустим стильный образ с поло в тех же тонах и брюками.</p>
+          <p><span class="gender-label">Девушкам:</span> коктейльные платья в цветовой гамме нашего торжества.</p>
         </div>
 
         <div class="references-wrapper">
