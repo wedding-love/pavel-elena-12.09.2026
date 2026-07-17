@@ -30,11 +30,11 @@
       scroll-behavior: smooth;
       overflow-x: hidden;
       height: 100%;
-      background-color: #461312;
+      background-color: #2E1A0E;
     }
 
     body {
-      background-color: #461312;
+      background: linear-gradient(145deg, #2E1A0E 0%, #461312 40%, #6C0B25 100%);
       font-family: "Bad Script", "Cormorant Garamond", cursive;
       font-weight: 400;
       display: flex;
@@ -54,7 +54,7 @@
     }
 
     .invitation-card {
-      background-color: #461312;
+      background: linear-gradient(180deg, #2E1A0E 0%, #461312 30%, #6C0B25 70%, #461312 100%);
       width: 100%;
       max-width: 620px;
       min-height: 100vh;
@@ -133,7 +133,7 @@
       min-height: 85dvh;
       display: flex;
       flex-direction: column;
-      background-color: #461312;
+      background: transparent;
       padding-bottom: 0;
       overflow: hidden;
       overflow-x: hidden;
@@ -144,14 +144,14 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      background-color: #461312;
+      background: transparent;
       padding: 30px 28px 30px;
       min-height: auto;
       margin-top: 0;
     }
 
     .screen-third {
-      background: linear-gradient(145deg, #2E1A0E 0%, #461312 100%);
+      background: transparent;
       padding: 50px 28px;
       justify-content: center;
       align-items: center;
@@ -159,7 +159,7 @@
     }
 
     .screen-fourth {
-      background-color: #461312;
+      background: transparent;
       padding: 50px 24px 60px;
       justify-content: center;
       align-items: center;
@@ -167,7 +167,7 @@
     }
 
     .screen-fifth {
-      background: linear-gradient(145deg, #2E1A0E 0%, #461312 100%);
+      background: transparent;
       padding: 50px 28px 35px;
       justify-content: center;
       align-items: center;
@@ -175,7 +175,7 @@
     }
 
     .screen-sixth {
-      background-color: #461312;
+      background: transparent;
       padding: 50px 28px 60px 28px;
       justify-content: center;
       align-items: center;
@@ -183,7 +183,7 @@
     }
 
     .screen-final {
-      background: linear-gradient(145deg, #2E1A0E 0%, #461312 100%);
+      background: transparent;
       padding: 50px 28px 60px 28px;
       justify-content: center;
       align-items: center;
@@ -563,7 +563,7 @@
       align-items: center;
       gap: 16px;
       padding: 16px 20px;
-      background: rgba(100, 101, 42, 0.08);
+      background: rgba(100, 101, 42, 0.15);
       border-left: 4px solid #64652A;
       border-radius: 0 8px 8px 0;
       opacity: 0;
@@ -602,7 +602,7 @@
     .timing-desc span {
       display: block;
       font-size: clamp(0.9rem, 2.5vw, 1.1rem);
-      color: #64652A;
+      color: #B5AD80;
       font-style: italic;
       font-family: "Cormorant Garamond", serif;
       font-weight: 400;
@@ -625,7 +625,7 @@
       font-weight: 600;
       font-style: italic;
       font-size: clamp(2rem, 6.5vw, 2.6rem);
-      color: #64652A;
+      color: #B5AD80;
       letter-spacing: 4px;
       text-transform: uppercase;
       text-align: center;
@@ -701,7 +701,7 @@
       display: none;
     }
 
-    /* ===== ДРЕСС-КОД: КАРТОЧКИ (БЕЗ ИКОНОК, ЕДИНЫЙ ШРИФТ) ===== */
+    /* ===== ДРЕСС-КОД: КАРТОЧКИ (ЦВЕТА ИЗ ПАЛИТРЫ) ===== */
     .dresscode-cards {
       display: flex;
       flex-direction: column;
@@ -710,17 +710,35 @@
     }
 
     .dresscode-card {
-      border: 1px solid rgba(100, 101, 42, 0.2);
+      border: 2px solid rgba(100, 101, 42, 0.3);
       border-radius: 12px;
       padding: 18px 16px;
-      background: rgba(255, 255, 255, 0.4);
       text-align: center;
-      transition: all 0.3s ease;
+      transition: all 0.4s ease;
     }
 
-    .dresscode-card:hover {
-      background: rgba(255, 255, 255, 0.7);
+    /* Мужчины — оливковый фон */
+    .dresscode-card:first-child {
+      background: rgba(100, 101, 42, 0.15);
+    }
+
+    .dresscode-card:first-child:hover {
+      background: rgba(100, 101, 42, 0.3);
       border-color: #64652A;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(100, 101, 42, 0.25);
+    }
+
+    /* Девушки — бордовый фон (градиент из двух оттенков) */
+    .dresscode-card:last-child {
+      background: linear-gradient(135deg, rgba(70, 19, 18, 0.15), rgba(108, 11, 37, 0.15));
+    }
+
+    .dresscode-card:last-child:hover {
+      background: linear-gradient(135deg, rgba(70, 19, 18, 0.3), rgba(108, 11, 37, 0.3));
+      border-color: #6C0B25;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(108, 11, 37, 0.25);
     }
 
     .card-title {
@@ -753,7 +771,7 @@
       width: 100%;
       margin: 0;
       padding: 0;
-      background: linear-gradient(145deg, #2E1A0E 0%, #461312 100%);
+      background: transparent;
       margin-left: -20px;
       margin-right: -20px;
       width: calc(100% + 40px);
@@ -843,7 +861,7 @@
       font-weight: 600;
       font-style: italic;
       font-size: clamp(2rem, 6.5vw, 2.6rem);
-      color: #64652A;
+      color: #B5AD80;
       letter-spacing: 4px;
       text-transform: uppercase;
       text-align: center;
@@ -884,7 +902,7 @@
       font-weight: 600;
       font-style: italic;
       font-size: clamp(2rem, 6.5vw, 2.6rem);
-      color: #64652A;
+      color: #B5AD80;
       letter-spacing: 4px;
       text-transform: uppercase;
       text-align: center;
@@ -1072,7 +1090,7 @@
       font-weight: 600;
       font-style: italic;
       font-size: clamp(2rem, 6vw, 2.4rem);
-      color: #64652A;
+      color: #B5AD80;
       letter-spacing: 3px;
       text-transform: uppercase;
       text-align: center;
@@ -1104,7 +1122,7 @@
 
     .contacts-label {
       font-size: clamp(1rem, 3.5vw, 1.2rem);
-      color: #64652A;
+      color: #B5AD80;
       letter-spacing: 1px;
     }
 
@@ -1120,13 +1138,13 @@
     }
 
     .contacts-number a:hover {
-      color: #64652A;
+      color: #B5AD80;
       text-decoration: underline;
     }
 
     .contacts-tg {
       font-size: clamp(0.9rem, 3vw, 1.1rem);
-      color: #64652A;
+      color: #B5AD80;
       opacity: 0.9;
     }
 
@@ -1181,7 +1199,7 @@
       font-weight: 600;
       font-style: italic;
       font-size: clamp(1.6rem, 5.5vw, 2.2rem);
-      color: #64652A;
+      color: #B5AD80;
       letter-spacing: 2px;
       line-height: 1.3;
     }
@@ -1295,7 +1313,7 @@
         min-height: 95vh;
       }
       body { 
-        background: #2E1A0E; 
+        background: linear-gradient(145deg, #2E1A0E 0%, #461312 50%, #6C0B25 100%);
         padding: 20px 0; 
       }
       .ref-image { width: 260px; height: 345px; }
@@ -1417,7 +1435,7 @@
     </div>
   </section>
 
-  <!-- ЭКРАН 5: ДРЕСС-КОД (КАРТОЧКИ БЕЗ ИКОНОК) -->
+  <!-- ЭКРАН 5: ДРЕСС-КОД -->
   <section class="screen screen-fifth">
     <div class="dresscode-container">
       <div class="dresscode-title fade-up-item delay-1">Дресс-код</div>
@@ -1443,7 +1461,7 @@
           </div>
         </div>
 
-        <!-- КАРТОЧКИ БЕЗ ИКОНОК, ЕДИНЫЙ ШРИФТ -->
+        <!-- КАРТОЧКИ С ЦВЕТАМИ ИЗ ПАЛИТРЫ -->
         <div class="dresscode-cards fade-up-item delay-5">
           <div class="dresscode-card">
             <div class="card-title">Мужчины</div>
