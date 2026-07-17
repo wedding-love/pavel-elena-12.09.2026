@@ -5,6 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5.0, user-scalable=yes, shrink-to-fit=no">
   <title>Наконец-то мы женимся | Свадебное приглашение</title>
 
+  <!-- OPEN GRAPH МЕТА-ТЕГИ ДЛЯ ПРЕВЬЮ ПРИ ОТПРАВКЕ ССЫЛКИ -->
+  <meta property="og:title" content="Наконец-то мы женимся! 🎉" />
+  <meta property="og:description" content="Павел и Елена приглашают вас на свадебное торжество 12 сентября 2026 года ❤️" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/your-repo/content.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://your-site.com/invitation" />
+  <meta property="og:type" content="website" />
+  
+  <!-- Twitter Card (для Twitter/X) -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Наконец-то мы женимся! 🎉" />
+  <meta name="twitter:description" content="Павел и Елена приглашают вас на свадебное торжество 12 сентября 2026 года ❤️" />
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/your-repo/content.png" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   
@@ -1045,7 +1060,6 @@
       transform: scale(1.02);
     }
 
-    /* Стили для уведомления */
     .form-notification {
       display: none;
       padding: 16px 20px;
@@ -1710,7 +1724,7 @@
       guestsField.classList.add('hidden');
     }
 
-    // === ОТПРАВКА ФОРМЫ БЕЗ ПЕРЕЗАГРУЗКИ ===
+    // === ОТПРАВКА ФОРМЫ ===
     const form = document.getElementById('guestForm');
     const submitBtn = document.getElementById('submitBtn');
     const notification = document.getElementById('formNotification');
@@ -1733,7 +1747,6 @@
         return;
       }
 
-      // Если выбрано "Да" на доп. гостей, проверяем заполнение имён
       const additionalYesChecked = additionalYes && additionalYes.checked;
       if (additionalYesChecked && !guestsInput.value.trim()) {
         showNotification('Пожалуйста, укажите имена гостей, которые будут с вами.', 'error');
@@ -1744,18 +1757,15 @@
       // Сбор данных
       const formData = new FormData(form);
       
-      // Добавляем названия чекбоксов в виде строки
       const drinks = form.querySelectorAll('input[name="drinks"]:checked');
       const drinksValues = Array.from(drinks).map(cb => cb.value).join(', ');
       if (drinksValues) {
         formData.set('drinks', drinksValues);
       }
 
-      // Добавляем текстовое значение для attendance
       const attendanceValue = attendance.value;
       formData.set('attendance', attendanceValue);
 
-      // Показываем загрузку
       submitBtn.disabled = true;
       submitBtn.textContent = 'Отправка...';
       showNotification('Отправляем вашу анкету...', 'loading');
@@ -1770,12 +1780,10 @@
         });
 
         if (response.ok) {
-          showNotification(' Спасибо! Ваша анкета успешно отправлена. Мы вас ждём! ', 'success');
+          showNotification('✅ Спасибо! Ваша анкета успешно отправлена. Мы вас ждём! ❤️', 'success');
           form.reset();
-          // Скрываем поле с именами гостей
           guestsField.classList.add('hidden');
           guestsInput.removeAttribute('required');
-          // Снимаем выделение с радио-кнопок дополнительных гостей
           if (additionalYes) additionalYes.checked = false;
           if (additionalNo) additionalNo.checked = false;
         } else {
@@ -1798,7 +1806,6 @@
       if (type) {
         notification.classList.add(type);
       }
-      // Автоматически скрываем через 8 секунд
       clearTimeout(notification._timeout);
       if (type === 'success' || type === 'error') {
         notification._timeout = setTimeout(() => {
