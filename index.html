@@ -1,3 +1,12 @@
+Вот обновлённый код с изменённым порядком фото в дресс-коде.
+
+**Новый порядок:**
+1. **Первое** — `IMG_8749.jpeg` (было последним, стало первым)
+2. **Второе** — `IMG_8746.jpeg` (было первым, стало вторым)
+3. **Третье** — `IMG_8748.jpeg` (осталось на своём месте)
+4. **Четвёртое** — `IMG_8747.jpeg` (было вторым, стало четвёртым)
+
+```html
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -1183,7 +1192,6 @@
       margin-top: 6px;
     }
 
-    /* ===== НОВЫЙ СТИЛЬ ДЛЯ ПОЛЯ ГОСТЕЙ ===== */
     .guests-field {
       margin-top: 6px;
       transition: all 0.3s ease;
@@ -1419,7 +1427,7 @@
     </div>
   </section>
 
-  <!-- ЭКРАН 5: ДРЕСС-КОД (с новыми фото) -->
+  <!-- ЭКРАН 5: ДРЕСС-КОД (новый порядок фото) -->
   <section class="screen screen-fifth">
     <div class="dresscode-container">
       <div class="dresscode-title fade-up-item delay-1">Дресс-код</div>
@@ -1460,11 +1468,11 @@
           <div class="ref-subtitle fade-up-item delay-1">Примеры нарядов</div>
           <div class="scroll-container">
             <div class="images-row">
-              <!-- НОВЫЕ ФОТО -->
-              <img src="IMG_8746.jpeg" class="ref-image" onerror="this.src='https://placehold.co/260x345/6C0B25/64652A?text=👗';">
-              <img src="IMG_8747.jpeg" class="ref-image" onerror="this.src='https://placehold.co/260x345/2E1A0E/64652A?text=👔';">
-              <img src="IMG_8748.jpeg" class="ref-image" onerror="this.src='https://placehold.co/260x345/64652A/f8f2ed?text=👗';">
+              <!-- НОВЫЙ ПОРЯДОК: 1→IMG_8749, 2→IMG_8746, 3→IMG_8748, 4→IMG_8747 -->
               <img src="IMG_8749.jpeg" class="ref-image" onerror="this.src='https://placehold.co/260x345/461312/64652A?text=👔';">
+              <img src="IMG_8746.jpeg" class="ref-image" onerror="this.src='https://placehold.co/260x345/6C0B25/64652A?text=👗';">
+              <img src="IMG_8748.jpeg" class="ref-image" onerror="this.src='https://placehold.co/260x345/64652A/f8f2ed?text=👗';">
+              <img src="IMG_8747.jpeg" class="ref-image" onerror="this.src='https://placehold.co/260x345/2E1A0E/64652A?text=👔';">
             </div>
           </div>
         </div>
@@ -1504,7 +1512,6 @@
           </div>
         </div>
 
-        <!-- НОВЫЙ ВОПРОС: БЕЗ ПРЕДУСТАНОВЛЕННОГО ВЫБОРА -->
         <div class="form-group fade-up-item delay-1" style="transition-delay: 0.5s;">
           <label class="form-label">Будет ли с вами кто-то ещё?</label>
           <div class="radio-group" id="additionalGuestsGroup">
@@ -1645,7 +1652,7 @@
     window.addEventListener('orientationchange', setAppHeight);
     setAppHeight();
 
-    // ===== ЛОГИКА ДЛЯ ПОЛЯ ГОСТЕЙ (БЕЗ ПРЕДУСТАНОВЛЕННОГО ВЫБОРА) =====
+    // Логика для поля гостей
     const additionalYes = document.getElementById('additionalYes');
     const additionalNo = document.getElementById('additionalNo');
     const guestsField = document.getElementById('guestsNamesField');
@@ -1664,10 +1671,9 @@
 
     additionalYes.addEventListener('change', toggleGuestsField);
     additionalNo.addEventListener('change', toggleGuestsField);
-
-    // При загрузке поле скрыто, т.к. ничего не выбрано
     guestsField.classList.add('hidden');
   })();
 </script>
 </body>
 </html>
+```
