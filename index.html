@@ -1253,28 +1253,6 @@
       border-bottom-color: #f8f2ed;
     }
 
-    .fallback-contacts {
-      text-align: center;
-      margin: 15px 0 10px;
-      padding: 15px;
-      background: rgba(100, 101, 42, 0.1);
-      border-radius: 12px;
-      width: 100%;
-    }
-
-    .fallback-contacts p {
-      font-family: "Bad Script", cursive;
-      color: #B5AD80;
-      font-size: 0.9rem;
-      margin-bottom: 6px;
-    }
-
-    .fallback-contacts .phones {
-      font-family: "Bad Script", cursive;
-      color: #f8f2ed;
-      font-size: 1rem;
-    }
-
     @media (max-width: 480px) {
       .screen-first { margin-bottom: -4px; }
       .first-content { padding: 3vh 14px 0; }
@@ -1329,9 +1307,6 @@
       .final-wishes { margin-top: 30px; }
       .final-container { gap: 35px; }
       .dresscode-card { padding: 14px 12px; }
-      .fallback-contacts { padding: 12px; }
-      .fallback-contacts p { font-size: 0.8rem; }
-      .fallback-contacts .phones { font-size: 0.9rem; }
     }
 
     @media (min-width: 481px) and (max-width: 767px) {
@@ -1622,14 +1597,6 @@
 
         <div id="formNotification" class="form-notification"></div>
 
-        <!-- Блок с контактами на случай ошибки -->
-        <div class="fallback-contacts fade-up-item delay-2">
-          <p>Если форма не работает, свяжитесь с нами:</p>
-          <div class="phones">
-            Елена: +7 919 950 35 85 &nbsp;|&nbsp; Павел: +7 916 187 15 60
-          </div>
-        </div>
-
         <button type="submit" class="submit-btn fade-up-item delay-2" style="transition-delay: 0.7s;" id="submitBtn">Отправить</button>
       </form>
 
@@ -1893,9 +1860,7 @@
       // === Если ничего не сработало ===
       if (!success) {
         showNotification(
-          'Не удалось отправить форму. Пожалуйста, свяжитесь с нами по телефону или в Telegram:\n' +
-          'Елена: +7 919 950 35 85\n' +
-          'Павел: +7 916 187 15 60',
+          'Не удалось отправить форму. Пожалуйста, повторите попытку позже или свяжитесь с нами напрямую.',
           'error'
         );
       }
